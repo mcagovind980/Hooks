@@ -124,26 +124,59 @@
 
 import { useEffect, useRef, useState } from "react";
 
-function App() {
-  const [name, setName] = useState("");
-  const previousName = useRef("");
+// function App() {
+//   const [name, setName] = useState("");
+//   const previousName = useRef("");
 
-  useEffect(() => {
-    previousName.current = name;
-  }, [name]);
+//   useEffect(() => {
+//     previousName.current = name;
+//   }, [name]);
 
-  return (
-    <>
-      <input
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+//   return (
+//     <>
+//       <input
+//         value={name}
+//         onChange={(e) => setName(e.target.value)}
+//       />
 
-      <h2>Current: {name}</h2>
+//       <h2>Current: {name}</h2>
 
-      <h2>Previous: {previousName.current}</h2>
-    </>
-  );
-}
+//       <h2>Previous: {previousName.current}</h2>
+//     </>
+//   );
+// }
 
-export default App;
+// export default App;
+
+// function Hook1()
+// {
+//  const [text,setText]=useState();
+// const k=useRef(0);
+//  useEffect(()=>
+// {
+//   setTimeout(()=>
+//   {
+//     setText(()=>
+// {
+//     k.current=k.current+"hello"
+//    return(k.current);
+
+// })
+// },1000)
+// },[])
+
+// function Submit(e)
+// {
+
+//   e.preventDefault();
+//   setText("hello")
+// }
+
+//   return(
+//   <><h1>this is{text}</h1>
+//  <h1>this is{text}</h1>
+// <button onClick={()=>setText(k.current)}>Click</button>
+//   </>
+//   )
+// }
+// export default Hook1
